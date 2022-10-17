@@ -1,0 +1,12 @@
+#Instalar Docker
+    cat user_data.yaml
+#cloud-config
+  packages_update: true
+    packages:
+      - docker.io
+    write_files:
+      - path: /root/index.html
+    content:
+        Docker se ha instalado correctamente
+      runcmd:
+        - docker run -d -v /root/index.html:/usr/share/nginx/html/index.html -p 80:80 nginx
