@@ -9,9 +9,9 @@ resource "digitalocean_droplet" "web" {
 
 
 # Crear un repositorio.
-resource "digitalocean_droplet" "Git_TF" {
+/*resource "digitalocean_droplet" "Git_TF" {
   name = "Git_TF"
-}
+}*/
 
   connection {
     host = self.ipv4_address
